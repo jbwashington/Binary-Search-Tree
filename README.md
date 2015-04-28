@@ -26,32 +26,26 @@ Compare quarterbacks based on one attribute, called by Search(), Insert(), and D
 We have two options in creating methods:
 
 1. Make 3 different Boolean methods that each does one thing:
-* <LessThan()>
-* <GreaterThan()>
-* <EqualTo()>
+```
+LessThan()
+GreaterThan()
+EqualTo()
+```
 
-2. Make a single <Compare()> method that encapsulate the following functionality:
+2. Make a single Compare() method that encapsulate the following functionality:
 ```
 // if 1n < 2n, return -1
 // if 1n > 2n, return 0
 // if 1n = 2n, return 1
 ```
 
-In the spirit of maintainability and readability, I chose to implement several smaller functions that each do one task (properly).  Although it's just swapping complexity, it still makes finding bugs easier and reduces friction within the application, which is what I'm trying to do here.
-
-
-#### 4: Implement everything in main.cpp TODO:
-1. Read data from text file into binary search tree.
-2. Prompt user at a menu to enter search criteria based on the following:
-   * Attention
-   * Yards
-   * Rating
-3. Output data, and sort it from low to high.
+I chose to implement several smaller functions that each do one task (properly).  Although it's just swapping complexity, it still makes finding bugs easier and reduces friction within the application, which is what I'm trying to do here.
 
 
 
 ### Testing TODO:
 When I first tested my program, the console output this:
+
 ```
 Insert 7 ok
 ( 7 )
@@ -113,5 +107,3 @@ Delete 5 failed
 ### Summary
 
 > TODO: Write summary
-
-commit log can be found on my [Github account] (https://www.github.com/jbwashington).
