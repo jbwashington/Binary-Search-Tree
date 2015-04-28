@@ -9,8 +9,9 @@
 int main()
 {
   // Create tree
-  BinaryTree Tree;
-  Tree.ReadFile("QB.txt");
+  BinaryTree test_tree;
+  test_tree.ReadFile("QB.txt");
+  test_tree.Print();
 
   /* // Test binary tree insertion */
   /* const int MAX = 10; */

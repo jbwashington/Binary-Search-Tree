@@ -261,28 +261,31 @@ void BinaryTree::Print()
 }
 
 
-/* --------------------------------- */
-/* read contents of text file  */
-/* --------------------------------- */
+/* ------------------------------------------------- */
+/* read contents of tab separated text file  */
+/* takes a string value for filename */
+/* returns true if read was successful, false if not */
+/* ------------------------------------------------- */
 bool BinaryTree::ReadFile(const std::string Filename)
 {
-  std::string line;
   std::ifstream infile (Filename.c_str());
-  /* infile.open(Filename.c_str()); */
+  std::string line;
+
   if (infile.fail()) {
     std::cout << "couldn't open the file" << std::endl;
     return false;
   }
+
   if (infile.is_open()) {
-    while (getline (infile,line)) {
+
+    while (std::getline(infile,line)) {
+
+      /* TODO: separate values by column */
+      /* TODO: select out the player, rating, attn, and yds columns */
       std::cout << line << std::endl;
     }
+
     infile.close();
   }
-  // while not at the end of file, print out everything
-
-  /* while (!infile.eof()) { */
-
-  /* } */
   return true;
 }
