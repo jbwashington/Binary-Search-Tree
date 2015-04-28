@@ -262,7 +262,7 @@ void BinaryTree::Print()
 
 
 /* --------------------------------- */
-/* read contents of array from file  */
+/* read contents of text file  */
 /* --------------------------------- */
 bool BinaryTree::ReadFile(const std::string Filename)
 {
